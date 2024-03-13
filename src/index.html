@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="prefetch" href="script1.js">
-    <link rel="prefetch" href="script2.js">
-      
+    <!-- <link rel="prefetch" href="script1.js">
+    <link rel="prefetch" href="script2.js"> -->
+    <script type="module" src="script1.js" async></script>
+    <script type="module" src="script2.js" async></script>
 </head>
 <body>
     <h1>hello</h1>
-    <!-- <script src="script1.js" defer></script> -->
-    <!-- <script src="script2.js" defer></script> -->
-    <script>
+    <!-- <script type="module" src="script1.js" async></script>
+    <script type="module" src="script2.js" async></script> -->
+    <!-- <script>
         [
             'script1.js',
             'script2.js'
@@ -22,7 +23,7 @@
             script.async = false;
             document.head.appendChild(script);
         });
-    </script> 
+    </script>  -->
     <h1>world</h1>
 </body>
 </html>
