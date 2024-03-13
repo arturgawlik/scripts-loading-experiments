@@ -21,17 +21,18 @@ function responseIndexHtml(res) {
   });
 
   readFile(resolve(import.meta.dirname, "index.html"), (err, data) => {
-    const fileLines = data.toString().split("\n");
+    const fileLines = data
+      .toString()
+      .split("\n")
+      .map((line) => line + "\n");
     let currentIndex = 0;
 
     const writeLine = () => {
       if (currentIndex === fileLines.length - 1) {
-        res.end(fileLines[currentIndex] + "\n");
+        res.end(fileLines[currentIndex]);
       } else {
-        res.write(fileLines[currentIndex] + "\n");
-        setTimeout(() => {
-          writeLine();
-        }, 1000);
+        res.write(fileLines[currentIndex]);
+        setTimeout(writeLine, 1000);
         currentIndex++;
       }
     };
