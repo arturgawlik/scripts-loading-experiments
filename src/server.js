@@ -1,7 +1,6 @@
 import { createServer } from "node:http";
 import { createReadStream, readFile } from "node:fs";
 import { resolve } from "node:path";
-import {} from "node:readline";
 
 createServer((req, res) => {
   if (req.url.includes("script1.js")) {
