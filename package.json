@@ -1,0 +1,13 @@
+{
+  "name": "scripts-loading-experiments",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script1.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --inspect=2000 ./src/server.js",
+    "watch": "nodemon --inspect=2000 ./src/server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
